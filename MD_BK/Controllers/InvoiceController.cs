@@ -14,10 +14,9 @@ namespace MD_BK.Controllers
                 invoiceId = 1,
                 customerName = "John Doe",
                 items = new[] {
-                    new { itemId = 1, name = "Widget A", price = 19.99M },
-                    new { itemId = 2, name = "Widget B", price = 9.50M }
+                    new { itemId = 1, name = "Widget A", price = 19.99 }
                 },
-                total = 29.49M
+                total = 19.99
             };
             return Ok(invoice);
         }
