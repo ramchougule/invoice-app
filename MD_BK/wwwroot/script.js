@@ -1,4 +1,4 @@
-// Fixed script: correct event name, fetch, and JSON parsing.
+
 document.addEventListener('DOMContentLoaded', function() {
     fetch('/api/invoice')
         .then(resp => {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let html = `<div><strong>Invoice #${data.invoiceId}</strong><div>Customer: ${data.customerName}</div></div>`;
             html += '<ul>';
             (data.items || []).forEach(item => {
-                // ensure proper property names
+                
                 html += `<li>${item.name} - $${Number(item.price).toFixed(2)}</li>`;
             });
             html += '</ul>';
